@@ -15,10 +15,10 @@ int binarySearchTree(vector<int>& vec, int sizeOfVec, int x){
             return midIndex;
         }
         if(vec[midIndex] < x){
-            minIndex += midIndex;
+            minIndex += 1;
         }
         if(vec[midIndex] > x){
-            maxIndex -= midIndex;
+            maxIndex -= 1;
         }
     }
     cout << "X is not located in array!" << endl;
@@ -26,10 +26,11 @@ int binarySearchTree(vector<int>& vec, int sizeOfVec, int x){
 }
 
 int main(){
-vector<int> elements = {2,4,6,12,24,48};
+vector<int> elements = {2,4,6,12,24,48,96};
 int size = elements.size();
 binarySearchTree(elements, size, 50);
 binarySearchTree(elements, size, 4);
 binarySearchTree(elements, size, 2);
+binarySearchTree(elements, size, 12);
 binarySearchTree(elements, size, 48);
 }
